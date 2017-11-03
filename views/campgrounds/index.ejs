@@ -1,0 +1,29 @@
+<% include ../partials/header %>
+
+<div class="container-fluid">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to TravelCamp!</h1>
+            <p class="lead">There are a bunch of wonderful places you should visit once in your life.</p>
+            
+            <a class="btn btn-success btn-lg" href="/campgrounds/new" role="button">Add New Campground</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="row">
+           <% campgrounds.forEach(function(campground){ %>
+            <div class="col col-md-3 col-sm-6 col-12">
+                <img src="<%= campground.image %>" class="img-thumbnail">
+                <h4 class="figure-caption text-center"><%= campground.name %></h4>
+                <p style="text-align: center">
+                    <a href="campgrounds/<%= campground._id %>" class="btn btn-success btn-sm">View More</a>
+                </p>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+   
+</div>
+
+<% include ../partials/footer %>
