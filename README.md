@@ -35,7 +35,7 @@ npm install --save
                   ...
           }
    ```
----
+## Guideline from scratch: 
 ### Layout and Basic Styling
 * Create header and footer partials
 * Add Bootstrap
