@@ -29,19 +29,22 @@
             </div>
             <div class="card bg-light">
                 <p><a class="btn btn-success btn-xs float-right" href="/campgrounds/<%= campground._id %>/comments/new" role="button">Leave your review</a></p>
-
-                <% campground.comments.forEach(function(comment){ %>
-                    <div class="row">
-                        <div class="col-md-12">
-                           <strong><%= comment.author.username %></strong>
-                           <span class="float-right">10 days ago</span>
-                           <p><%= comment.text %></p>
-                           <hr>
-                        </div>
-                    </div>
-                <% }) %>
-            </div>
             
+                <ul class="list-unstyled">
+                    <% campground.comments.forEach(function(comment){ %>
+                        <li class="media">
+                                <div class="align-self-start mr-3">    
+                                   <strong><%= comment.author.username %></strong>
+                                   <div>10 days ago</div>
+                               </div>
+                               <div class="media-body">
+                                   <p><%= comment.text %></p>
+                               </div>
+                                <a class="btn btn-warning btn-sm" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
             
         </div>
     </div>    
