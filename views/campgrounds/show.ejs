@@ -40,7 +40,13 @@
                                <div class="media-body">
                                    <p><%= comment.text %></p>
                                </div>
-                                <a class="btn btn-warning btn-sm" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                               <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                                    <a class="btn btn-warning btn-sm" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                                    <form action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                                        <button class="btn btn-danger btn-sm" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">Delete</button>
+                                    </form>
+                                <% } %>
+                               
                         </li>
                     <% }) %>
                 </ul>
