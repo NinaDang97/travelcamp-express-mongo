@@ -1,5 +1,5 @@
 # TravelCamp
-Welcome to TravelCamp! A Travel Blog where everyone can create their own travel posts and view other users' experiences, as well as give reviews or contact with the posts' owners. As long as you sign up and log in, the whole blog is yours!
+Welcome to TravelCamp!<br /> A Travel Blog where everyone can create their own travel posts and view other users' experiences, as well as give reviews or contact with the posts' owners. As long as you sign up and log in, the whole blog is yours!
 Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
 ### Setup MongoDB
