@@ -2,6 +2,7 @@ var express     = require("express"),
     app         = express(),
     bodyParser  = require("body-parser"),
     mongoose    = require("mongoose"),
+    flash       = require("connect-flash"),
     passport    = require("passport"),
     LocalStrategy   = require("passport-local"),
     methodOverried  = require("method-override"),
@@ -16,12 +17,13 @@ var commentRoutes       = require("./routes/comments"),
     indexRoutes         = require("./routes/index");
 
 //mongo connect + app config
-mongoose.connect("mongodb://localhost/travel_camp_v9", {useMongoClient: true});
+mongoose.connect("mongodb://localhost/travel_camp_v11", {useMongoClient: true});
 mongoose.Promise = global.Promise;
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(methodOverried("_method"));
+app.use(flash());
 seedDB();
 
 // PASSPORT CONFIGURATION
@@ -40,6 +42,8 @@ passport.deserializeUser(User.deserializeUser());
 //pass req.user to every single template EJS
 app.use(function(req, res, next){
     res.locals.currentUser = req.user;
+    res.locals.error = req.flash("error"); //unlock isLoggedIn middleware
+    res.locals.success = req.flash("success");
     next(); //without next(), it stops and doesn't move to next middleware/route handler
 });
 

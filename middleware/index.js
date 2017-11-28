@@ -9,18 +9,21 @@ middlewareObj.checkCampgroundOwnership = function(req, res, next){
     //if not, redirect 
     if(req.isAuthenticated()){
         Campground.findById(req.params.id, function(err, foundCampground){
-        if(err){
-            res.redirect("/campgrounds");
+        if(err || !foundCampground){
+            req.flash("error", "Campground is not found.");
+            res.redirect("back");
         } else{
             //does user own the campground??
             if(foundCampground.author.id.equals(req.user._id)){
                  next(); //move on to the code of edit/update/delete 
             } else{
+                req.flash("error", "You don't have permission to do that!");
                 res.redirect("back");
             }
         }
         });
     } else{
+        req.flash("error", "You need to be logged in to do that");
         res.redirect("back"); //take user to previous where they were  
     }
 }
@@ -38,11 +41,13 @@ middlewareObj.checkCommentOwnership = function(req, res, next){
             if(foundComment.author.id.equals(req.user._id)){
                  next(); //move on to the code of edit/update/delete 
             } else{
+                req.flash("error", "You don't have permission to do that!");
                 res.redirect("back");
             }
         }
         });
     } else{
+        req.flash("error", "You need to be logged in to do that");
         res.redirect("back"); //take user to previous where they were  
     }
 }
@@ -52,6 +57,7 @@ middlewareObj.isLoggedIn = function(req, res, next){
     if(req.isAuthenticated()){
         return next();
     }
+    req.flash("error", "You need to be logged in to do that"); //key: error, value: Please ...
     res.redirect("/login");
 }
 
