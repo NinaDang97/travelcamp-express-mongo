@@ -1,9 +1,9 @@
 # TravelCamp
-Welcome to TravelCamp! A Travel Blog where everyone can create their own travel posts and view other users' experiences, as well as give reviews or contact with the posts' owners. As long as you sign up and log in, the whole blog is yours!
+Welcome to TravelCamp!<br /> A Travel Blog where everyone can create their own travel posts and view other users' experiences, as well as give reviews or contact with the posts' owners. As long as you sign up and log in, the whole blog is yours!
 Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
 ### Setup MongoDB
-If built with [cloud 9](https://community.c9.io/t/setting-up-mongodb/1717) 
+If built with cloud 9, [click here](https://community.c9.io/t/setting-up-mongodb/1717) 
 
 ### NPM Install
 ```
@@ -11,9 +11,10 @@ npm install --save
 ```
 - express (Server-side Javascript)
 - ejs (Embedded Javascript)
-- body-parser 
+- body-parser (middleware: convert form data under `req.body` property as an object)
 - mongoose (mongoDB for Express version)
 - method-override (used for method PUT and DELETE in RESTful ROUTE that form type in cliend-side doesn't support
+- connect-flash (middleware: store message displayed for user once and cleared after page being refreshed)
 - passport
 - passport-local
 - passport-local-mongoose
@@ -161,4 +162,6 @@ npm install --save
 
 ### Middleware Refactor
 
+### Flash Message Adding
+* Install and configure connect-flash
 #### Inspired by Web Developer Bootcamp - Colt Steele
