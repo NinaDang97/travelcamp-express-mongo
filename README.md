@@ -3,7 +3,7 @@ Welcome to TravelCamp!<br /> A Travel Blog where everyone can create their own t
 Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
 ### Setup MongoDB
-If built with [cloud 9](https://community.c9.io/t/setting-up-mongodb/1717) 
+If built with cloud 9, [click here](https://community.c9.io/t/setting-up-mongodb/1717) 
 
 ### NPM Install
 ```
