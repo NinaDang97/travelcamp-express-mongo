@@ -11,9 +11,10 @@ npm install --save
 ```
 - express (Server-side Javascript)
 - ejs (Embedded Javascript)
-- body-parser 
+- body-parser (middleware: convert form data under `req.body` property as an object)
 - mongoose (mongoDB for Express version)
 - method-override (used for method PUT and DELETE in RESTful ROUTE that form type in cliend-side doesn't support
+- connect-flash (middleware: store message displayed for user once and cleared after page being refreshed)
 - passport
 - passport-local
 - passport-local-mongoose
@@ -161,4 +162,6 @@ npm install --save
 
 ### Middleware Refactor
 
+### Flash Message Adding
+* Install and configure connect-flash
 #### Inspired by Web Developer Bootcamp - Colt Steele
