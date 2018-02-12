@@ -22,7 +22,7 @@ npm install --save
 - passport-local-mongoose
 - express-session
 
-## Simple guideline from scratch
+## Some definition during project:
 
  1. The differences between Authentication and Authorization:
  - Authentication: get people signup/login. In other words, people need to tell app/website who they are.
