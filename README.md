@@ -38,6 +38,23 @@ npm install --save
                   ...
           }
    ```
+
+## Heroku Deployment: 
+1. In package.json:
+  `"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  }`
+2. Setup your mlab before publishing project to heroku:
+- Name new database
+- Create new user
+- Replace code line in app.js: `mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds245228.mlab.com:45228/travelcamp")`
+
+3. git cmd (login in git)
+` git init .`
+` git commit -m "heroku deploy" `
+` git push heroku master `
+
 ## Guideline from scratch: 
 ### Layout and Basic Styling
 * Create header and footer partials
