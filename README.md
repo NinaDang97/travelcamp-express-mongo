@@ -40,6 +40,7 @@ npm install --save
    ```
 
 ## Heroku Deployment: 
+After project is done: 
 1. In package.json:
   `"scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
