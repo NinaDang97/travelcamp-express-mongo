@@ -52,10 +52,11 @@ After project is done:
 - Replace code line in app.js: `mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds245228.mlab.com:45228/travelcamp")`
 
 3. git cmd (login in git)
-` git init .`
-` git commit -m "heroku deploy" `
-` git push heroku master `
-
+- ` git init ` 
+- ` git add . `
+- ` git commit -m "heroku deploy" `
+- ` heroku create `
+- ` git push heroku master ` => done!
 ## Guideline from scratch: 
 ### Layout and Basic Styling
 * Create header and footer partials
