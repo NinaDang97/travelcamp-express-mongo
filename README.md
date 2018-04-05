@@ -13,7 +13,7 @@ npm install --save
 ```
 - express (Server-side Javascript)
 - ejs (Embedded Javascript)
-- body-parser (middleware: convert form data under `req.body` property as an object)
+- body-parser (middleware: convert form data requests from user under `req.body` property as an object)
 - mongoose (mongoDB for Express version)
 - method-override (used for method PUT and DELETE in RESTful ROUTE that form type in cliend-side doesn't support
 - connect-flash (middleware: store message displayed for user once and cleared after page being refreshed)
