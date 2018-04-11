@@ -10,9 +10,9 @@ Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubu
 2. If built locally on Windows 10, installing [mongodDB](https://www.mongodb.com/) (currently mine is version 3.6)
 *** In case cannot run command `mongod` on Git Bash due to command not found and/or you haven't set up MongoDB environment, check [Youtube tutorial](https://www.youtube.com/watch?v=ll2tY6KH8Tk) or official [MongoDB documentation](https://docs.mongodb.com/master/tutorial/install-mongodb-on-windows/)
 
-### NPM Install
+### Install and running app
 ```
-npm install --save 
+npm install 
 ```
 - express (Server-side Javascript)
 - ejs (Embedded Javascript)
@@ -24,6 +24,11 @@ npm install --save
 - passport-local
 - passport-local-mongoose
 - express-session
+
+```
+node app.js 
+```
+- It will direct to localhost:3000
 
 ## Some definition during project:
 
