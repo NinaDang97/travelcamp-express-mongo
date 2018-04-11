@@ -2,6 +2,9 @@
 Welcome to TravelCamp!<br /> A Travel Blog where everyone can create their own travel posts and view other users' experiences, as well as give reviews or contact with the posts' owners. As long as you sign up and log in, the whole blog is yours!
 Built in [cloud9](https://c9.io) - a powerful online code editor with a full Ubuntu workspace in the cloud.
 
+### Demo Version
+[travelCamp](https://lit-beyond-73637.herokuapp.com/)
+
 ### Setup MongoDB 
 1. If built with cloud 9, [click here](https://community.c9.io/t/setting-up-mongodb/1717)
 2. If built locally on Windows 10, installing [mongodDB](https://www.mongodb.com/) (currently mine is version 3.6)
