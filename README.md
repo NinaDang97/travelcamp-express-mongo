@@ -63,7 +63,7 @@ After project is done:
 - ` git init ` 
 - ` git add . `
 - ` git commit -m "heroku deploy" `
-- ` heroku create ` (login and create new app)
+- ` heroku create ` (login and create new app, download Heroku CLI)
 - ` git push heroku master ` => done!
 ## Guideline from scratch: 
 ### Layout and Basic Styling
