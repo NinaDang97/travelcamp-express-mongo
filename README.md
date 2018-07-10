@@ -65,6 +65,11 @@ After project is done:
 - ` git commit -m "heroku deploy" `
 - ` heroku create ` (login and create new app, download Heroku CLI)
 - ` git push heroku master ` => done!
+Or when you delete your current heroku app and want to deploy again:
+- `git remote set-url heroku <new heroku git url>`
+- ` git push heroku master ` => done!
+
+git push heroku master
 ## Guideline from scratch: 
 ### Layout and Basic Styling
 * Create header and footer partials
