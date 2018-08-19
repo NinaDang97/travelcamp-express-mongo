@@ -50,10 +50,12 @@ node app.js
 ## Heroku Deployment: 
 After project is done: 
 1. In package.json:
-  `"scripts": {
+  ```
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-  }`
+  }
+  ```
 2. Setup your mlab before publishing project to heroku:
 - Name new database
 - Create new user
@@ -63,13 +65,11 @@ After project is done:
 - ` git init ` 
 - ` git add . `
 - ` git commit -m "heroku deploy" `
-- ` heroku create ` (login and create new app, download Heroku CLI)
+- ` heroku create [app-name]` (login and create new app, download Heroku CLI)
 - ` git push heroku master ` => done!
 * Or when you delete your current heroku app and want to deploy again:
 - `git remote set-url heroku <new heroku git url>`
 - ` git push heroku master ` => done!
-
-git push heroku master
 
 <!-- 
 ## Guideline from scratch: 
